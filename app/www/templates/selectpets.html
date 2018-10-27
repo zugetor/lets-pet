@@ -15,15 +15,15 @@
 		  </label>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col col-50 col-offset-25" ng-repeat="pet in pet">
-		  <label class="item item-input">{{pet.name}}</label>
-		  <label class="item item-input">{{pet.type}}</label>
-		  <label class="item item-input">{{pet.age}}</label>
-		  <label class="item item-input">{{pet.gender}}</label>
-		  <label class="item item-input">{{pet.description}}</label>
-		  <label class="item item-input">{{pet.breed}}</label>
-		  <label class="item item-input"><p ng-repeat="tag in pet.tag">{{tag}}&nbsp;</p></label>
+	<div class="row" ng-repeat="p in pet">
+		<div class="col col-50 col-offset-25">
+		  <label class="item item-input">{{p.name}}</label>
+		  <label class="item item-input">{{p.type}}</label>
+		  <label class="item item-input">{{p.age}}</label>
+		  <label class="item item-input">{{p.gender}}</label>
+		  <label class="item item-input">{{p.description}}</label>
+		  <label class="item item-input">{{p.breed}}</label>
+		  <label class="item item-input"><p ng-repeat="tag in p.tag">{{tag}}&nbsp;</p></label>
 		</div>
 	</div>
   </ion-content>
