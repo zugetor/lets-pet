@@ -73,6 +73,7 @@ angular.module('starter.controllers', [])
 	.controller('ProfileCtrl', function ($scope, logincheck) {
 		$scope.logout = function () {
 			logincheck.leave();
+			$state.go("app.home");
 		};
 	})
 
