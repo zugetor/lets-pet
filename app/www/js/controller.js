@@ -114,7 +114,8 @@ angular.module('starter.controllers', [])
 					"gender": "Male",
 					"description": "สีน้ำตาล ฟันหลอ 1 ซี่ ชอบกินเนื้อย่าง",
 					"breed": "บางแก้วผสมไทยหลังอาน",
-					"tag": ["ขี้เล่น", "ขี้อ้อน"]
+					"tag": ["ขี้เล่น", "ขี้อ้อน"],
+					"imgurl":["img/cocoa.jpg","img/cocoa2.jpg"]
 				},
 				{
 					"name": "ลัคกี้",
@@ -388,7 +389,6 @@ angular.module('starter.controllers', [])
 				}
 			],
 			"other": [{
-
 					"name": "มีมี่",
 					"type": "เม่นแคระ",
 					"age": 2,
