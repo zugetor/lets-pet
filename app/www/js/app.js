@@ -109,7 +109,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		views: {
 		  'menuContent': {
 			templateUrl: 'templates/detail.html',
-			controller: 'selectpetsCtrl'
+			controller: 'selecttypeCtrl'
 		  }
 		}
 	})

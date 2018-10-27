@@ -96,12 +96,8 @@ angular.module('starter.controllers', [])
 			}
 		}
 	})
-
-	.controller('selecttypeCtrl', function ($scope) {
-	})
-
-	.controller('selectpetsCtrl', function ($scope, $ionicPlatform, $stateParams) {
-		$scope.allpet = {
+	.factory('database', function ($rootScope) {
+		var allpet = {
 			"allpet": {
 				"dog": [{
 					"name": "โกโก้", "type": "สุนัข", "age": 3, "gender": "Male", "description": "สีน้ำตาล ฟันหลอ 1 ซี่ ชอบกินเนื้อย่าง",
@@ -201,9 +197,17 @@ angular.module('starter.controllers', [])
 				}]
 			}
 		};
+		return {
+			get: function () {
+				return allpet;
+			}
+		}
+	})
+
+	.controller('selecttypeCtrl', function ($scope, $stateParams, database) {
+		$scope.allpet = database.get();
 		$scope.type = $stateParams.type;
-		$scope.pet = $scope.allpet["allpet"][$scope.type];
-		$scope.pet2 = $scope.allpet["allpet"][$scope.type][$stateParams.id];
+		$scope.pet2 = $scope.allpet["allpet"][$scope.type][$stateParams.id];		
 		$scope.slideIndex = 1;
 		$scope.showDivs = function (n) {
 			var i;
@@ -217,10 +221,16 @@ angular.module('starter.controllers', [])
 		};
 		$scope.plusDivs = function (n) {
 			$scope.showDivs($scope.slideIndex += n);
-		}
-		$ionicPlatform.ready(function() { // เตรียมก่อนเรียกใช้ plugin
-            $scope.plusDivs(0);
-        });
+		};	
+		$scope.show = function () {
+			$scope.plusDivs(1);
+		};
+	})
+
+	.controller('selectpetsCtrl', function ($scope, $stateParams, database) {
+		$scope.allpet = database.get();
+		$scope.type = $stateParams.type;
+		$scope.pet = $scope.allpet["allpet"][$scope.type];		
 	})
 
 	.controller('DonateCtrl', function ($scope, $ionicPopup) {
