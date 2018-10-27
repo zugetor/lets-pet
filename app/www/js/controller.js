@@ -65,4 +65,13 @@ $scope.randomtip= function () {
 	$ionic.Platform.ready(function(){
 		$scope.randomtip();
 	  });
-});
+})
+
+
+
+
+
+
+.controller('selectpetsCtrl', function($scope, $rootScope, $timeout) {
+	
+})
