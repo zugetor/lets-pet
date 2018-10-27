@@ -477,5 +477,5 @@ angular.module('starter.controllers', [])
 		}]
 		};
 		$scope.type = $stateParams.type;
-	$scope.pet = $scope.allpet["blog"][$scope.type]
+	$scope.blogx = $scope.allpet["blog"][$scope.type]
 })
