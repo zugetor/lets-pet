@@ -4,7 +4,6 @@ angular.module('starter.controllers', [])
 	})
 	.controller('findFormCtrl', function ($scope, $rootScope, $timeout) {
 		$scope.slideIndex = 1;
-
 		$scope.showDivs = function (n) {
 			var i;
 			var x = document.getElementsByClassName("mySlides");
@@ -53,12 +52,11 @@ angular.module('starter.controllers', [])
 			"หนูแฮมสเตอร์ชอบกินไข่ต้มที่ต้มสุก",
 			"กระรอกมีการสะสมหรือซ่อนอาหารไว้กินในฤดูหนาว",
 			"ต้นบอนสี (Caladium) เป็นพืชที่มีพิษกับสุนัข หรือแมว"];
-
 		$scope.tipOf = "ช็อตโกแลต เป็นอาหารต้องห้ามของเหล่าสัตว์เลี้ยง";
 		$scope.randomtip = function () {
-			$scope.tipOf = tip[Math.floor(Math.random() * tip.length)];
+			$scope.tipOf = tip[Math.floor(Math.random() * tip.length)];	
 		}
-		$interval(function () { $scope.randomtip(); }, 10000);
+		$interval(function () {$scope.randomtip();}, 5000);
 		$scope.go = function () {
 			logincheck.go();
 		}
