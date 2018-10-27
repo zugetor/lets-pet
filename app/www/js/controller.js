@@ -54,7 +54,7 @@ angular.module('starter.controllers', [])
 	"กระรอกมีการสะสมหรือซ่อนอาหารไว้กินในฤดูหนาว",
 	"ต้นบอนสี (Caladium) เป็นพืชที่มีพิษกับสุนัข หรือแมว"];
 
-	$scope.tipOf= "ช็อตโกแลต เป็นอาหารต้องห้ามของเหล่าสัตว์เลี้ยง";
+	$scope.tipOf= "ช็อตโกแลต \\nเป็นอาหา\\nรต้องห้าม\\nของเหล่\\nาสัตว์เลี้ยง";
 	$scope.randomtip= function () {
 		$scope.tipOf = tip[Math.floor(Math.random()*tip.length)];
 	}
@@ -442,8 +442,8 @@ angular.module('starter.controllers', [])
 	};
 })
 
-.controller('knowledgeCtrl', function($scope, $state, logincheck) {
-	var blog={
+.controller('knowledgeCtrl', function($scope, $state, $stateParams, logincheck) {
+	$scope.blog={
 		"posts":[
 		{
 		"topic":"ความอ้วนของสุนัข เรื่องน่ารักที่มาพร้อมโรคร้าย!!",
@@ -477,5 +477,5 @@ angular.module('starter.controllers', [])
 		}]
 		};
 		$scope.type = $stateParams.type;
-	$scope.blogx = $scope.allpet["blog"][$scope.type]
+		$scope.posts = $scope.blog["posts"];
 })
