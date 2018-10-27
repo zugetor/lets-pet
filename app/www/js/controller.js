@@ -234,28 +234,32 @@ angular.module('starter.controllers', [])
 		$scope.pet = $scope.allpet["allpet"][$scope.type];		
 	})
 
-	.controller('DonateCtrl', function ($scope, $ionicPopup) {
-		$scope.openform = function () {
-			var confirmPopup = $ionicPopup.confirm({
-				title: 'เลือกสถานที่บริจาค',
-				template: 'คุณจะบริจาคให้ที่ไหน?',
-				cancelText: 'สถานพักพิงสัตว์นีโม่',
-				cancelType: 'button-positive',
-				okText: "สถานพักพิงสัตว์นาเกลือ"
-			});
+	.controller('DonateCtrl', function($scope, $state, $ionicPlatform, $ionicPopup) {
+		$scope.place = "";
+		$scope.openform = function(){		
 			$scope.price = document.getElementById("donateVal").value;
-			confirmPopup.then(function (res) {
-				if (res) {
-					var alertPopup = $ionicPopup.alert({
-						title: 'PromptPay QR Code',
-						template: '<div class="text-center"><img src="https://promptpay.io/0909108479/' + $scope.price + '" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
-					});
-				} else {
-					var alertPopup2 = $ionicPopup.alert({
-						title: 'PromptPay QR Code',
-						template: '<div class="text-center"><img src="https://promptpay.io/0851412356/' + $scope.price + '" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
-					});
-				}
+			$ionicPopup.show({
+				template: '<ion-list><ion-radio id="choose">สถานพักพิงสัตว์นีโม่</ion-radio><ion-radio>สถานพักพิงสัตว์นาเกลือ</ion-radio></ion-list>',
+				title: 'เลือกสถานที่สำหรับบริจาค',
+				buttons: [{
+					text: 'Cancel',
+				}, {
+					text: '<b>Save</b>',
+					type: 'button-positive',
+					onTap: function(e) {
+						if(document.getElementById("choose")["childNodes"][0]["checked"]){
+							var alertPopup = $ionicPopup.alert({
+								title: 'PromptPay QR Code',
+								template: '<div class="text-center"><img src="https://promptpay.io/0909108479/'+$scope.price+'" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
+							});
+						}else{
+							var alertPopup2 = $ionicPopup.alert({
+								title: 'PromptPay QR Code',
+								template: '<div class="text-center"><img src="https://promptpay.io/0851412356/'+$scope.price+'" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
+							});
+						}
+					}
+				}]
 			});
 		};
 	})
