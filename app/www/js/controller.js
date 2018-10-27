@@ -24,7 +24,7 @@ angular.module('starter.controllers', [])
 	};
 })
 
-.controller('HomeCtrl', function($scope, $rootScope, $timeout,$ionic) {
+.controller('HomeCtrl', function($scope, $rootScope, $interval, $ionicPlatform) {
 	var tip = ["ถั่วแมคคาเดเมียจะทำให้กล้ามเนื้อสุนัขอ่อนแรง โดยจะส่งผลกับขาหลังของสุนัข อาจเป็นหนักถึงอัมพาต",
 	"ไข่ดิบจะทำให้สุนัขขาดไบโอติน ผลก็คือ ผิวจะแห้ง และเป็นเกล็ดขุยๆ ขนหลุดร่วง เจริญเติบโตช้ากว่าปกติ",
 	"ผักบุ้ง (Morning glory) เป็นโทษกับสุนัข",
@@ -55,23 +55,8 @@ angular.module('starter.controllers', [])
 	"ต้นบอนสี (Caladium) เป็นพืชที่มีพิษกับสุนัข หรือแมว"];
 
 	$scope.tipOf= "ช็อตโกแลต เป็นอาหารต้องห้ามของเหล่าสัตว์เลี้ยง";
-$scope.randomtip= function () {
-		$timeout(function(){
-			$scope.tipOf = tip[Math.floor(Math.random()*tip.length)];
-			alert("xxx");
-		}, 1000)
+	$scope.randomtip= function () {		
+		$scope.tipOf = tip[Math.floor(Math.random()*tip.length)];
 	}
-
-	$ionic.Platform.ready(function(){
-		$scope.randomtip();
-	  });
-})
-
-
-
-
-
-
-.controller('selectpetsCtrl', function($scope, $rootScope, $timeout) {
-	
-})
+	$interval( function(){ $scope.randomtip(); }, 10000);
+});

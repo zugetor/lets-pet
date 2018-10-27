@@ -1,11 +1,9 @@
 /* Empty. Add your own CSS if you like */
-.img-auto
-{
+.img-auto{
     width: 60%;
 	height: auto;
 }
-a
-{
+a{
 	text-decoration: none;
 }
 .donate-pic{
@@ -20,7 +18,7 @@ a
 }
 .sas{
 	background: #b3ffff;
-  }
+}
 .displayed {
     margin-left: auto;
     margin-right: auto;
@@ -29,4 +27,9 @@ a
     padding: 5px;
     width: 150px;
 }
-.mySlides {display:none;}
+.mySlides {
+	display:none;
+}
+body{
+	font-family: 'Kanit', sans-serif;
+}
