@@ -17,16 +17,28 @@
 	</div>
 	<div class="row" ng-repeat="p in pet">
 		<div class="col col-80 col-offset-10">
-				<div class="col col-75 col-offset-33">
-			<img class="selectx" src="{{p.imgurl[0]}}">
-			</div>
-		  <label class="item item-input">{{p.name}}</label>
-		  <label class="item item-input">{{p.age}}</label>
-		  <label class="item item-input">{{p.gender}}</label>
-		  <label class="item item-input">{{p.description}}</label>
-		  <label class="item item-input">{{p.breed}}</label>
-		  <label class="item item-input"><p ng-repeat="tag in p.tag">{{tag}}&nbsp;</p></label>
+				<div class="list card">
+
+						<div class="item">
+							<center><h2>{{p.name}}</h2></center>
+						</div>
+					
+						<div class="item item-body">
+								<img class="full-image" src="{{p.imgurl[0]}}">
+							<p>
+									<label class="item item-input">อายุ {{p.age}}</label>
+									<label class="item item-input">{{p.gender}}</label>
+									<label class="item item-input">สายพันธุ์ {{p.breed}}</label>
+							</p>
+									<label class="item item-input"><div ng-repeat="tag in p.tag">#{{tag}}&nbsp;</div></label>
+						</div>
+					</div>
 		</div>
 	</div>
   </ion-content>
 </ion-view>
+
+
+<button class="button button-outline button-positive" ng-repeat="tag in p.tag">
+		{{tag}}
+	</button>
