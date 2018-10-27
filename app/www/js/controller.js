@@ -55,7 +55,7 @@ angular.module('starter.controllers', [])
 	"ต้นบอนสี (Caladium) เป็นพืชที่มีพิษกับสุนัข หรือแมว"];
 
 	$scope.tipOf= "ช็อตโกแลต เป็นอาหารต้องห้ามของเหล่าสัตว์เลี้ยง";
-	$scope.randomtip= function () {		
+	$scope.randomtip= function () {
 		$scope.tipOf = tip[Math.floor(Math.random()*tip.length)];
 	}
 	$interval( function(){ $scope.randomtip(); }, 10000);
