@@ -242,9 +242,9 @@ angular.module('starter.controllers', [])
 				template: '<ion-list><ion-radio id="choose">สถานพักพิงสัตว์นีโม่</ion-radio><ion-radio>สถานพักพิงสัตว์นาเกลือ</ion-radio></ion-list>',
 				title: 'เลือกสถานที่สำหรับบริจาค',
 				buttons: [{
-					text: 'Cancel',
+					text: 'ยกเลิก',
 				}, {
-					text: '<b>Save</b>',
+					text: '<b>ถัดไป</b>',
 					type: 'button-positive',
 					onTap: function(e) {
 						if(document.getElementById("choose")["childNodes"][0]["checked"]){
