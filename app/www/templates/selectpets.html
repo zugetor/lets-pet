@@ -16,9 +16,11 @@
 		</div>
 	</div>
 	<div class="row" ng-repeat="p in pet">
-		<div class="col col-50 col-offset-25">
+		<div class="col col-80 col-offset-10">
+				<div class="col col-75 col-offset-33">
+			<img class="selectx" src="{{p.imgurl[0]}}">
+			</div>
 		  <label class="item item-input">{{p.name}}</label>
-		  <label class="item item-input">{{p.type}}</label>
 		  <label class="item item-input">{{p.age}}</label>
 		  <label class="item item-input">{{p.gender}}</label>
 		  <label class="item item-input">{{p.description}}</label>
