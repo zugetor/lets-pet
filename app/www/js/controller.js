@@ -388,6 +388,7 @@ angular.module('starter.controllers', [])
 				}
 			],
 			"other": [{
+
 					"name": "มีมี่",
 					"type": "เม่นแคระ",
 					"age": 2,
