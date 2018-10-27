@@ -69,7 +69,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		url: '/donate',
 		views: {
 		  'menuContent': {
-			templateUrl: 'templates/donate.html'
+			templateUrl: 'templates/donate.html',
+			controller: 'DonateCtrl'
 		  }
 		}
 	})
@@ -116,7 +117,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		url: '/knowledge',
 		views: {
 		  'menuContent': {
-			templateUrl: 'templates/knowledge.html'
+			templateUrl: 'templates/knowledge.html',
+			controller: 'knowledgeCtrl'
 		  }
 		}
 	})
