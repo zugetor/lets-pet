@@ -1,7 +1,11 @@
 <ion-view>
-  <ion-nav-bar class="bar-stable">
-    <ion-nav-title>Find</ion-nav-title>
-  </ion-nav-bar>
+  <ion-nav-bar class="bar-stable">		
+		<ion-nav-buttons side="left">
+			<a class="button button-icon ion-arrow-left-c" href="#/app/menu"></a>
+		</ion-nav-buttons>
+		
+		<ion-nav-title>Find</ion-nav-title>
+	</ion-nav-bar>
   <ion-content>
     <div class="list">
       <label class="item item-input item-stacked-label">
@@ -72,8 +76,19 @@
         <input type="text" placeholder="บางแก้ว,ขาวมณี">
       </label>
     </div>
-    <button class="button button-royal button-block button-positive">
-      ประกาศหาบ้าน
-    </button>
+	<div class="row row-center">
+		<div class="col col-center" id="showpic">	
+			<img class="mySlides full-image" src="img/Pixiebob-cat.jpg">
+			<img class="mySlides full-image" src="img/puppy-090517-dog-featured-355w-200h-d.jpg">
+		</div>
+	</div>
+	<div class="row hide" id="ctrlbutton">
+		<div class="col text-center">
+			<button class="button ion-icon ion-chevron-left" ng-click="plusDivs(-1)"></button>
+			<button class="button ion-icon ion-chevron-right" ng-click="plusDivs(1)"></button>
+		</div>
+	</div>
+	<button class="button button-royal button-block button-positive" ng-click="show()">เพิ่มรูป</button>
+    <button class="button button-royal button-block button-positive">ประกาศหาบ้าน</button>
   </ion-content>
 </ion-view>

@@ -8,5 +8,11 @@
     "gulp-clean-css": "^3.7.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "ng-base64": "^1.5.1"
+  },
+  "cordova": {
+    "plugins": {}
   }
 }

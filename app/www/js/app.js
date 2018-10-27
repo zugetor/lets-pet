@@ -66,7 +66,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		url: '/findform',
 		views: {
 		  'menuContent': {
-			templateUrl: 'templates/findform.html'
+			templateUrl: 'templates/findform.html',
+			controller: 'findFormCtrl'
 		  }
 		}
 	})
