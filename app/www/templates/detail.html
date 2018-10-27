@@ -28,9 +28,9 @@
 							<label class="item item-input">อายุ {{pet2.age}} ปี</label>
 							<label class="item item-input">{{pet2.gender}}</label>
 							<label class="item item-input">สายพันธุ์ {{pet2.breed}}</label>
-							<label class="item item-input">เจ้าของ {{pet2.owner}}</label>
+							<label class="item item-input"><div ng-repeat="tag in pet2.tag">#{{tag}}&nbsp;</div></label>
+							<label class="item item-input">ผู้ประกาศ {{pet2.owner}}</label>
 						</p>
-						<label class="item item-input"><div ng-repeat="tag in pet2.tag">#{{tag}}&nbsp;</div></label>
 					</div>
 					<div class="padding">
 						<a class="button button-block button-balanced" ng-href="tel:{{pet2.tel}}">โทรเลยจ้า</a>
