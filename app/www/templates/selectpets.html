@@ -1,22 +1,30 @@
 <ion-view>
-        <ion-nav-bar class="bar-stable">
-                <ion-nav-buttons side="left">
-                        <a class="button button-icon ion-arrow-left-c" href="#/app/menu"></a>
-                    </ion-nav-buttons>
-            <ion-nav-buttons side="right">
-                <a class="button button-icon ion-person" href="#/app/login"></a>
-            </ion-nav-buttons>
-            
-            <ion-nav-title>Find pets</ion-nav-title>
-        </ion-nav-bar>
-        <ion-content>
-                <div class="col col-50 col-offset-25">
-                        <label class="item item-input">
-                          <i class="icon ion-search placeholder-icon"></i>
-                          <input type="text" placeholder="Search">
-                        </label>
-                      </div>
-            
-                
-        </ion-content>
-    </ion-view>
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-buttons side="left">
+      <a class="button button-icon ion-arrow-left-c" href="#/app/menu"></a>
+    </ion-nav-buttons>
+
+    <ion-nav-title>Find pets</ion-nav-title>
+  </ion-nav-bar>
+  <ion-content>
+	<div class="row">
+		<div class="col col-50 col-offset-25">
+		  <label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" placeholder="Search">
+		  </label>
+		</div>
+	</div>
+	<div class="row" ng-repeat="p in pet">
+		<div class="col col-50 col-offset-25">
+		  <label class="item item-input">{{p.name}}</label>
+		  <label class="item item-input">{{p.type}}</label>
+		  <label class="item item-input">{{p.age}}</label>
+		  <label class="item item-input">{{p.gender}}</label>
+		  <label class="item item-input">{{p.description}}</label>
+		  <label class="item item-input">{{p.breed}}</label>
+		  <label class="item item-input"><p ng-repeat="tag in p.tag">{{tag}}&nbsp;</p></label>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>

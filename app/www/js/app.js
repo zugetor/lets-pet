@@ -39,7 +39,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		url: '/home',
 		views: {
 		  'menuContent': {
-			templateUrl: 'templates/home.html'
+			templateUrl: 'templates/home.html',
+			controller: 'HomeCtrl'
 		  }
 		}
 	})
@@ -48,7 +49,18 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		url: '/login',
 		views: {
 		  'menuContent': {
-			templateUrl: 'templates/login.html'
+			templateUrl: 'templates/login.html',
+			controller: 'LoginCtrl'
+		  }
+		}
+	})
+	
+	.state('app.profile', {
+		url: '/profile',
+		views: {
+		  'menuContent': {
+			templateUrl: 'templates/profile.html',
+			controller: 'ProfileCtrl'
 		  }
 		}
 	})
@@ -66,7 +78,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		url: '/findform',
 		views: {
 		  'menuContent': {
-			templateUrl: 'templates/findform.html'
+			templateUrl: 'templates/findform.html',
+			controller: 'findFormCtrl'
 		  }
 		}
 	})
@@ -81,10 +94,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 	})
 	
 	.state('app.selectpets', {
-		url: '/selectpets',
+		url: '/selectpets/:type',
 		views: {
 		  'menuContent': {
-			templateUrl: 'templates/selectpets.html'
+			templateUrl: 'templates/selectpets.html',
+			controller: 'selectpetsCtrl'
 		  }
 		}
 	})
