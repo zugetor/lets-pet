@@ -52,6 +52,60 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		  }
 		}
 	})
+	
+	.state('app.donate', {
+		url: '/donate',
+		views: {
+		  'menuContent': {
+			templateUrl: 'templates/donate.html'
+		  }
+		}
+	})
+	
+	.state('app.findform', {
+		url: '/findform',
+		views: {
+		  'menuContent': {
+			templateUrl: 'templates/findform.html'
+		  }
+		}
+	})
+	
+	.state('app.selecttype', {
+		url: '/selecttype',
+		views: {
+		  'menuContent': {
+			templateUrl: 'templates/selecttype.html'
+		  }
+		}
+	})
+	
+	.state('app.selectpets', {
+		url: '/selectpets',
+		views: {
+		  'menuContent': {
+			templateUrl: 'templates/selectpets.html'
+		  }
+		}
+	})
+	
+	.state('app.detail', {
+		url: '/detail',
+		views: {
+		  'menuContent': {
+			templateUrl: 'templates/detail.html'
+		  }
+		}
+	})
+	
+	.state('app.knowledge', {
+		url: '/knowledge',
+		views: {
+		  'menuContent': {
+			templateUrl: 'templates/knowledge.html'
+		  }
+		}
+	})
 
 	$ionicConfigProvider.backButton.text("");
 	// if none of the above states are matched, use this as the fallback
