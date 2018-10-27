@@ -36,13 +36,22 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 	})
 	
 	.state('app.home', {
-    url: '/home',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/home.html',
-      }
-    }
-  })
+		url: '/home',
+		views: {
+		  'menuContent': {
+			templateUrl: 'templates/home.html'
+		  }
+		}
+	})
+	
+	.state('app.login', {
+		url: '/login',
+		views: {
+		  'menuContent': {
+			templateUrl: 'templates/login.html'
+		  }
+		}
+	})
 
 	$ionicConfigProvider.backButton.text("");
 	// if none of the above states are matched, use this as the fallback
