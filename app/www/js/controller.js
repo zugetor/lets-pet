@@ -122,7 +122,7 @@ angular.module('starter.controllers', [])
 					"breed": "-", "tag": ["ขี้เซา"], "imgurl": ["img/hengheng.jpg"], "owner": "เรนะ", "tel": "082235697"
 				}, {
 					"name": "ลาเต้", "type": "สุนัข", "age": 6, "gender": "Male",
-					"description": "สีน้ำตาลขาว รักเด็ก ดื้อมาก", "breed": "โกลเด้น", "tag": ["ขี้เล่น"], "imgurl": ["img/ล้าเต้.jpg", "img/ลาเต้2.jpg"], "owner": "สมศรี", "tel": "0812478965"
+					"description": "สีน้ำตาลขาว รักเด็ก ดื้อมาก", "breed": "โกลเด้น", "tag": ["ขี้เล่น"], "imgurl": ["img/ลาเต้.jpg", "img/ลาเต้2.jpg"], "owner": "สมศรี", "tel": "0812478965"
 				}, {
 					"name": "ตาล", "type": "สุนัข", "age": 2, "gender": "Male", "description": "กลัวคนแปลกหน้า ชอบกินข้าวคลุกกระดูกไก่สับ",
 					"breed": "ชาเป่ย", "tag": ["ขี้กลัว", "ขี้อ้อน"], "imgurl": ["img/ตาล.jpg", "img/ตาล2.jpg"], "owner": "มิกิ", "tel": "087654234"
@@ -163,7 +163,7 @@ angular.module('starter.controllers', [])
 					"breed": "ซันคอนัว", "tag": ["ขี้้อ้อน"], "imgurl": ["img/sunny.jpg"], "owner": "มุกกี้", "tel": "082213569"
 				}, {
 					"name": "ยูกิ", "type": "นก", "age": 3, "gender": "Female", "description": "ชอบเล่นไล่จับ",
-					"breed": "นกกระตั้ว", "tag": ["ขี้เล่น"], "imgurl": ["img/yuki.jpg"], "owner": "โทรุ", "tel": "084538741"
+					"breed": "นกกระตั้ว", "tag": ["ขี้เล่น"], "imgurl": ["img/yugi.jpg"], "owner": "โทรุ", "tel": "084538741"
 				}, {
 					"name": "กิ๊ก", "type": "นก", "age": 2, "gender": "Female", "description": "ชอบร้องเพลง ชอบพูดตามคน",
 					"breed": "แก้ว", "tag": ["ขี้เล่น"], "imgurl": ["img/กิ๊ก.jpg", "img/กิ๊ก2.jpg"], "owner": "เฟร", "tel": "084125378"
