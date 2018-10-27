@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-	.controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
+	.controller('AppCtrl', function ($scope) {
 	})
 	.controller('findFormCtrl', function ($scope, $rootScope, $timeout) {
 		$scope.slideIndex = 1;
@@ -23,7 +23,7 @@ angular.module('starter.controllers', [])
 		};
 	})
 
-	.controller('HomeCtrl', function ($scope, $rootScope, $interval, $ionicPlatform, logincheck) {
+	.controller('HomeCtrl', function ($scope, $interval, logincheck) {
 		var tip = ["ถั่วแมคคาเดเมียจะทำให้กล้ามเนื้อสุนัขอ่อนแรง โดยจะส่งผลกับขาหลังของสุนัข อาจเป็นหนักถึงอัมพาต",
 			"ไข่ดิบจะทำให้สุนัขขาดไบโอติน ผลก็คือ ผิวจะแห้ง และเป็นเกล็ดขุยๆ ขนหลุดร่วง เจริญเติบโตช้ากว่าปกติ",
 			"ผักบุ้ง (Morning glory) เป็นโทษกับสุนัข",
@@ -62,7 +62,7 @@ angular.module('starter.controllers', [])
 		}
 	})
 
-	.controller('LoginCtrl', function ($scope, $state, logincheck) {
+	.controller('LoginCtrl', function ($scope, logincheck) {
 		$scope.login = function () {
 			logincheck.enter();
 			$state.go("app.home");
@@ -70,7 +70,7 @@ angular.module('starter.controllers', [])
 	})
 
 
-	.controller('ProfileCtrl', function ($scope, $state, logincheck) {
+	.controller('ProfileCtrl', function ($scope, logincheck) {
 		$scope.logout = function () {
 			logincheck.leave();
 		};
@@ -97,10 +97,10 @@ angular.module('starter.controllers', [])
 		}
 	})
 
-	.controller('selecttypeCtrl', function ($scope, $state, logincheck) {
+	.controller('selecttypeCtrl', function ($scope) {
 	})
 
-	.controller('selectpetsCtrl', function ($scope, $state, $stateParams, logincheck) {
+	.controller('selectpetsCtrl', function ($scope, $ionicPlatform, $stateParams) {
 		$scope.allpet = {
 			"allpet": {
 				"dog": [{
@@ -203,9 +203,27 @@ angular.module('starter.controllers', [])
 		};
 		$scope.type = $stateParams.type;
 		$scope.pet = $scope.allpet["allpet"][$scope.type];
+		$scope.pet2 = $scope.allpet["allpet"][$scope.type][$stateParams.id];
+		$scope.slideIndex = 1;
+		$scope.showDivs = function (n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			if (n > x.length) { $scope.slideIndex = 1 }
+			if (n < 1) { $scope.slideIndex = x.length }
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			x[$scope.slideIndex - 1].style.display = "block";
+		};
+		$scope.plusDivs = function (n) {
+			$scope.showDivs($scope.slideIndex += n);
+		}
+		$ionicPlatform.ready(function() { // เตรียมก่อนเรียกใช้ plugin
+            $scope.plusDivs(0);
+        });
 	})
 
-	.controller('DonateCtrl', function ($scope, $state, $ionicPlatform, $ionicPopup) {
+	.controller('DonateCtrl', function ($scope, $ionicPopup) {
 		$scope.openform = function () {
 			var confirmPopup = $ionicPopup.confirm({
 				title: 'เลือกสถานที่บริจาค',
@@ -231,7 +249,7 @@ angular.module('starter.controllers', [])
 		};
 	})
 
-	.controller('knowledgeCtrl', function ($scope, $state, $stateParams, logincheck) {
+	.controller('knowledgeCtrl', function ($scope) {
 		$scope.blog = {
 			"posts": [
 				{
@@ -266,64 +284,4 @@ angular.module('starter.controllers', [])
 				}]
 		};
 		$scope.posts = $scope.blog["posts"]
-	})
-
-	.controller('DonateCtrl', function ($scope, $state, $ionicPlatform, $ionicPopup) {
-		$scope.place = "";
-		$scope.openform = function () {
-			$scope.price = document.getElementById("donateVal").value;
-			$ionicPopup.show({
-				template: '<ion-list><ion-radio id="choose">สถานพักพิงสัตว์นีโม่</ion-radio><ion-radio>สถานพักพิงสัตว์นาเกลือ</ion-radio></ion-list>',
-				title: 'เลือกสถานที่สำหรับบริจาค',
-				buttons: [{
-					text: 'Cancel',
-				}, {
-					text: '<b>Save</b>',
-					type: 'button-positive',
-					onTap: function (e) {
-						if (document.getElementById("choose")["childNodes"][0]["checked"]) {
-							var alertPopup = $ionicPopup.alert({
-								title: 'PromptPay QR Code',
-								template: '<div class="text-center"><img src="https://promptpay.io/0909108479/' + $scope.price + '" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
-							});
-						} else {
-							var alertPopup2 = $ionicPopup.alert({
-								title: 'PromptPay QR Code',
-								template: '<div class="text-center"><img src="https://promptpay.io/0851412356/' + $scope.price + '" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
-							});
-						}
-					}
-				}]
-			});
-		};
-	})
-
-	.controller('DonateCtrl', function ($scope, $state, $ionicPlatform, $ionicPopup) {
-		$scope.place = "";
-		$scope.openform = function () {
-			$scope.price = document.getElementById("donateVal").value;
-			$ionicPopup.show({
-				template: '<ion-list><ion-radio id="choose">สถานพักพิงสัตว์นีโม่</ion-radio><ion-radio>สถานพักพิงสัตว์นาเกลือ</ion-radio></ion-list>',
-				title: 'เลือกสถานที่สำหรับบริจาค',
-				buttons: [{
-					text: 'Cancel',
-				}, {
-					text: '<b>Save</b>',
-					type: 'button-positive',
-					onTap: function (e) {
-						if (document.getElementById("choose")["childNodes"][0]["checked"]) {
-							var alertPopup = $ionicPopup.alert({
-								title: 'PromptPay QR Code',
-								template: '<div class="text-center"><img src="https://promptpay.io/0909108479/' + $scope.price + '" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
-							});
-						} else {
-							var alertPopup2 = $ionicPopup.alert({
-								title: 'PromptPay QR Code',
-								template: '<div class="text-center"><img src="https://promptpay.io/0851412356/' + $scope.price + '" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
-							});
-						}
-					}
-				}]
-			});
-		};
 	})
