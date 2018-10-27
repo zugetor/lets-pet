@@ -62,7 +62,7 @@ angular.module('starter.controllers', [])
 		}
 	})
 
-	.controller('LoginCtrl', function ($scope, logincheck) {
+	.controller('LoginCtrl', function ($scope,$state,logincheck) {
 		$scope.login = function () {
 			logincheck.enter();
 			$state.go("app.home");
@@ -70,7 +70,7 @@ angular.module('starter.controllers', [])
 	})
 
 
-	.controller('ProfileCtrl', function ($scope, logincheck) {
+	.controller('ProfileCtrl', function ($scope,$state,logincheck) {
 		$scope.logout = function () {
 			logincheck.leave();
 			$state.go("app.home");
