@@ -3,18 +3,28 @@
     <ion-nav-buttons side="left">
       <a class="button button-icon ion-arrow-left-c" href="#/app/menu"></a>
     </ion-nav-buttons>
-    <ion-nav-buttons side="right">
-      <a class="button button-icon ion-person" href="#/app/login"></a>
-    </ion-nav-buttons>
 
     <ion-nav-title>Find pets</ion-nav-title>
   </ion-nav-bar>
   <ion-content>
-    <div class="col col-50 col-offset-25">
-      <label class="item item-input">
-        <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="Search">
-      </label>
-    </div>
+	<div class="row">
+		<div class="col col-50 col-offset-25">
+		  <label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" placeholder="Search">
+		  </label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-50 col-offset-25" ng-repeat="pet in pet">
+		  <label class="item item-input">{{pet.name}}</label>
+		  <label class="item item-input">{{pet.type}}</label>
+		  <label class="item item-input">{{pet.age}}</label>
+		  <label class="item item-input">{{pet.gender}}</label>
+		  <label class="item item-input">{{pet.description}}</label>
+		  <label class="item item-input">{{pet.breed}}</label>
+		  <label class="item item-input"><p ng-repeat="tag in pet.tag">{{tag}}&nbsp;</p></label>
+		</div>
+	</div>
   </ion-content>
 </ion-view>

@@ -104,8 +104,8 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('selectpetsCtrl', function($scope, $state, logincheck) {
-	var allpet={
+.controller('selectpetsCtrl', function($scope, $state, $stateParams, logincheck) {
+	$scope.allpet={
 		"allpet": {
 			"dog": [{
 					"name": "โกโก้",
@@ -412,6 +412,8 @@ angular.module('starter.controllers', [])
 			]
 		}
 	};
+	$scope.type = $stateParams.type;
+	$scope.pet = $scope.allpet["allpet"][$scope.type]
 })
 
 

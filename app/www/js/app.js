@@ -94,10 +94,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 	})
 	
 	.state('app.selectpets', {
-		url: '/selectpets',
+		url: '/selectpets/:type',
 		views: {
 		  'menuContent': {
-			templateUrl: 'templates/selectpets.html'
+			templateUrl: 'templates/selectpets.html',
+			controller: 'selectpetsCtrl'
 		  }
 		}
 	})
