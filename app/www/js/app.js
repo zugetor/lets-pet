@@ -124,6 +124,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		}
 	})
 
+	.state('app.review', {
+		url: '/review',
+		views: {
+		  'menuContent': {
+			templateUrl: 'templates/review.html',
+			controller: 'reviewCtrl'
+		  }
+		}
+	})
+
+	.state('app.mypetlist', {
+		url: '/mypetlist',
+		views: {
+		  'menuContent': {
+			templateUrl: 'templates/mypetlist.html',
+			controller: 'mypetlistCtrl'
+		  }
+		}
+	})
+
 	$ionicConfigProvider.backButton.text("");
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/app/home');

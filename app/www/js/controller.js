@@ -300,3 +300,9 @@ angular.module('starter.controllers', [])
 		};
 		$scope.posts = $scope.blog["posts"]
 	})
+
+	.controller('reviewCtrl', function ($scope) {
+	})
+
+	.controller('mypetlistCtrl', function ($scope) {
+	})

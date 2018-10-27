@@ -3,12 +3,20 @@
 		<ion-nav-buttons side="left">
 			<a class="button button-icon ion-arrow-left-c" href="#/app/menu"></a>
 		</ion-nav-buttons>		
-		<ion-nav-title>Profile</ion-nav-title>
+		<ion-nav-title>ข้อมูลส่วนตัว</ion-nav-title>
 	</ion-nav-bar>
 	<ion-content>
 		<center>
 		<div class="item">สมศักดิ์</div>
 		<div class="item"><img class="selectx" src="img/user.jpg"></div>
+		<div class="row">
+			<div class="col col-50 text-center">
+					<a class="button button-block button-positive" href="#/app/mypetlist">ประกาศของฉัน</a>
+			</div>
+			<div class="col col-50 text-center">
+				<a class="button button-block button-positive" href="#/app/review">รีวิวบ้านผู้รับเลี้ยง</a>												  
+			</div>
+		</div>
 		<div class="item"><button class="button button-block button-positive" ng-click="logout()">Log out</button></div>
 		</center>
 	</ion-content>
