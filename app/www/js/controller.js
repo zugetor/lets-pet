@@ -24,7 +24,7 @@ angular.module('starter.controllers', [])
 	};
 })
 
-.controller('HomeCtrl', function($scope, $rootScope, $interval, $ionicPlatform) {
+.controller('HomeCtrl', function($scope, $rootScope, $interval, $ionicPlatform, logincheck) {
 	var tip = ["ถั่วแมคคาเดเมียจะทำให้กล้ามเนื้อสุนัขอ่อนแรง โดยจะส่งผลกับขาหลังของสุนัข อาจเป็นหนักถึงอัมพาต",
 	"ไข่ดิบจะทำให้สุนัขขาดไบโอติน ผลก็คือ ผิวจะแห้ง และเป็นเกล็ดขุยๆ ขนหลุดร่วง เจริญเติบโตช้ากว่าปกติ",
 	"ผักบุ้ง (Morning glory) เป็นโทษกับสุนัข",
@@ -59,4 +59,42 @@ angular.module('starter.controllers', [])
 		$scope.tipOf = tip[Math.floor(Math.random()*tip.length)];
 	}
 	$interval( function(){ $scope.randomtip(); }, 10000);
+	$scope.go = function () {		
+		logincheck.go();
+	}
+})
+
+.controller('LoginCtrl', function($scope, $state, logincheck) {
+	$scope.login = function () {		
+		logincheck.enter();
+		$state.go("app.home");
+	};	
+})
+
+.controller('ProfileCtrl', function($scope, $state, logincheck) {
+	$scope.logout = function () {		
+		logincheck.leave();
+	};
+})
+
+.factory('logincheck', function($rootScope, $state){
+     
+     var hasLogin = false;
+
+     return {
+        go: function(){
+			if(!hasLogin){
+				$state.go("app.login");
+			}else{
+				$state.go("app.profile");
+			}
+        },
+        enter : function(){
+			hasLogin = true;			
+        },
+		leave : function(){
+			hasLogin = false;			
+        }		
+     }
+
 });

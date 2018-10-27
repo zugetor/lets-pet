@@ -49,7 +49,18 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		url: '/login',
 		views: {
 		  'menuContent': {
-			templateUrl: 'templates/login.html'
+			templateUrl: 'templates/login.html',
+			controller: 'LoginCtrl'
+		  }
+		}
+	})
+	
+	.state('app.profile', {
+		url: '/profile',
+		views: {
+		  'menuContent': {
+			templateUrl: 'templates/profile.html',
+			controller: 'ProfileCtrl'
 		  }
 		}
 	})
