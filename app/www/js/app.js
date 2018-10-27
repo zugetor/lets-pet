@@ -105,10 +105,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 	})
 	
 	.state('app.detail', {
-		url: '/detail',
+		url: '/detail/:id/:type',
 		views: {
 		  'menuContent': {
-			templateUrl: 'templates/detail.html'
+			templateUrl: 'templates/detail.html',
+			controller: 'selectpetsCtrl'
 		  }
 		}
 	})

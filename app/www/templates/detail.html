@@ -1,0 +1,41 @@
+<ion-view>
+	<ion-nav-bar class="bar-stable">		
+		<ion-nav-buttons side="left">
+			<a class="button button-icon ion-arrow-left-c" href="#/app/selectpets/{{type}}"></a>
+		</ion-nav-buttons>		
+		<ion-nav-title>รายละเอียด</ion-nav-title>
+	</ion-nav-bar>
+	<ion-content>
+	<div class="row">
+		<div class="col col-80 col-offset-10">
+			<div class="list card">
+				<div class="item">
+					<center><h2>{{pet2.name}}</h2></center>
+				</div>				
+				<div class="item item-body">
+					<div class="row row-center">
+						<div class="col col-center" id="showpic" ng-repeat="linking in pet2.imgurl">	
+							<img class="mySlides full-image" src="{{linking}}">
+						</div>
+					</div>
+					<div class="row hide" id="ctrlbutton">
+						<div class="col text-center">
+							<button class="button ion-icon ion-chevron-left" ng-click="plusDivs(-1)"></button>
+							<button class="button ion-icon ion-chevron-right" ng-click="plusDivs(1)"></button>
+						</div>
+					</div>
+					<p>
+						<label class="item item-input">อายุ {{pet2.age}}</label>
+						<label class="item item-input">{{pet2.gender}}</label>
+						<label class="item item-input">สายพันธุ์ {{pet2.breed}}</label>
+					</p>
+					<label class="item item-input"><div ng-repeat="tag in pet2.tag">#{{tag}}&nbsp;</div></label>
+				</div>
+				<div class="padding">
+					<a class="button button-block button-balanced" href="#">โทรเลยจ้า</a>
+				</div>
+			</div>				
+		</div>
+	</div>
+	</ion-content>
+</ion-view>
