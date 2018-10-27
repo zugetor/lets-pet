@@ -116,7 +116,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		url: '/knowledge',
 		views: {
 		  'menuContent': {
-			templateUrl: 'templates/knowledge.html'
+			templateUrl: 'templates/knowledge.html',
+			controller: 'knowledgeCtrl'
 		  }
 		}
 	})
