@@ -163,7 +163,7 @@ angular.module('starter.controllers', [])
 					"breed": "ซันคอนัว","tag": ["ขี้้อ้อน"],"imgurl": ["img/sunny.jpg"]
 				},{
 					"name": "ยูกิ","type": "นก","age": 3,"gender": "เพศเมีย","description": "ชอบเล่นไล่จับ",
-					"breed": "นกกระตั้ว","tag": ["ขี้เล่น"],"imgurl": ["img/yuki.jpg"]
+					"breed": "นกกระตั้ว","tag": ["ขี้เล่น"],"imgurl": ["img/yugi.jpg"]
 				},{
 					"name": "กิ๊ก","type": "นก","age": 2,"gender": "เพศเมีย","description": "ชอบร้องเพลง ชอบพูดตามคน",
 					"breed": "แก้ว","tag": ["ขี้เล่น"],"imgurl": ["img/กิ๊ก.jpg", "img/กิ๊ก2.jpg"]
@@ -199,7 +199,7 @@ angular.module('starter.controllers', [])
 					"breed": "เฮดจ์ฮอก","tag": ["ขี้กลัว","ขี้เซา"],"imgurl": ["img/มีมี่.jpg", "img/มีมี่2.jpg"]
 				},{
 					"name": "โซจิโร่","type": "เม่น","age": 2,"gender": "เพศผู้","description": "ชอบกินแอปเปิล",
-					"breed": "-","tag": ["ขี้เซา", "ขี้อ้อน"],"imgurl": ["img/cocoa.jpg", "img/cocoa2.jpg"]
+					"breed": "-","tag": ["ขี้เซา", "ขี้อ้อน"],"imgurl": ["img/sojiro.jpg", "img/sojiro2.jpg"]
 				}]
 			}
 		};
