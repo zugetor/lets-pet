@@ -106,99 +106,99 @@ angular.module('starter.controllers', [])
 		$scope.allpet = {
 			"allpet": {
 				"dog": [{
-					"name": "โกโก้","type": "สุนัข","age": 3,"gender": "Male","description": "สีน้ำตาล ฟันหลอ 1 ซี่ ชอบกินเนื้อย่าง",
-					"breed": "บางแก้วผสมไทยหลังอาน","tag": ["ขี้เล่น", "ขี้อ้อน"],"imgurl": ["img/cocoa.jpg", "img/cocoa2.jpg"]
+					"name": "โกโก้","type": "สุนัข","age": 3,"gender": "เพศผู้","description": "สีน้ำตาล ฟันหลอ 1 ซี่ ชอบกินเนื้อย่าง",
+					"breed": "บางแก้วผสมไทยหลังอาน","tag": ["ขี้เล่น", "ขี้อ้อน"],"imgurl": ["img/cocoa.jpg", "img/cocoa2.jpg"],'index':0
 				},{
-					"name": "ลัคกี้","type": "สุนัข","age": 2,"gender": "Female","description": "ขนสีขาว ไม่ชอบที่มืด",
+					"name": "ลัคกี้","type": "สุนัข","age": 2,"gender": "เพศเมีย","description": "ขนสีขาว ไม่ชอบที่มืด",
 					"breed": "พุดเดิ้ล","tag": ["ขี้เล่น", "ขี้อ้อน"],"imgurl": ["img/Lucky.jpg"]
 				},{
-					"name": "ชิโร่","type": "สุนัข","age": 5,"gender": "Male","description": "สีเนื้อ ขนมันเงา ชอบเล่นจานร่อน",
+					"name": "ชิโร่","type": "สุนัข","age": 5,"gender": "เพศผู้","description": "สีเนื้อ ขนมันเงา ชอบเล่นจานร่อน",
 					"breed": "อกิตะ","tag": ["ขี้เล่น"],"imgurl": ["img/shiro.jpg"]
 				},{
-					"name": "โครอน","type": "สุนัข","age": 4,"gender": "Female",
+					"name": "โครอน","type": "สุนัข","age": 4,"gender": "เพศเมีย",
 					"description": "สีน้ำตาล ชอบวิ่งเล่น","breed": "คอลลี่","tag": ["ขี้เล่น", "ขี้อ้อน"],"imgurl": ["img/coron.jpg"]
 				},{
-					"name": "เฮงเฮง","type": "สุนัข","age": 12,"gender": "Male","description": "สีขาวดำ",
+					"name": "เฮงเฮง","type": "สุนัข","age": 12,"gender": "เพศผู้","description": "สีขาวดำ",
 					"breed": "-","tag": ["ขี้เซา"],"imgurl": ["img/hengheng.jpg"]
 				},{
-					"name": "ลาเต้","type": "สุนัข","age": 6,"gender": "Male",
-					"description": "สีน้ำตาลขาว รักเด็ก ดื้อมาก","breed": "โกลเด้น","tag": ["ขี้เล่น"],"imgurl": ["img/ล้าเต้.jpg", "img/ลาเต้2.jpg"]
+					"name": "ลาเต้","type": "สุนัข","age": 6,"gender": "เพศผู้",
+					"description": "สีน้ำตาลขาว รักเด็ก ดื้อมาก","breed": "โกลเด้น","tag": ["ขี้เล่น"],"imgurl": ["img/ลาเต้.jpg", "img/ลาเต้2.jpg"]
 				},{
-					"name": "ตาล","type": "สุนัข","age": 2,"gender": "Male","description": "กลัวคนแปลกหน้า ชอบกินข้าวคลุกกระดูกไก่สับ",
+					"name": "ตาล","type": "สุนัข","age": 2,"gender": "เพศผู้","description": "กลัวคนแปลกหน้า ชอบกินข้าวคลุกกระดูกไก่สับ",
 					"breed": "ชาเป่ย","tag": ["ขี้กลัว","ขี้อ้อน"],"imgurl": ["img/ตาล.jpg", "img/ตาล2.jpg"]
 				},{
-					"name": "บูบู้","type": "สุนัข","age": 3,"gender": "Male","description": "สีดำทั้งตัว ",
+					"name": "บูบู้","type": "สุนัข","age": 3,"gender": "เพศผู้","description": "สีดำทั้งตัว ",
 					"breed": "พิตบู","tag": ["ขี้เล่น","ก้าวร้าว"],"imgurl": ["img/บูบู้.jpg", "img/บูบู้2.jpg"]
 				},{
-					"name": "ลินดา","type": "สุนัข","age": 4,"gender": "Female","description": "รักเด็กผู้หญิง ชอบเล่นลูกบอล ชอบปีนป่าย กินอาหารเม็ด",
+					"name": "ลินดา","type": "สุนัข","age": 4,"gender": "เพศเมีย","description": "รักเด็กผู้หญิง ชอบเล่นลูกบอล ชอบปีนป่าย กินอาหารเม็ด",
 					"breed": "คอลลี่","tag": ["ขี้เล่น","ขี้อ้อน"],"imgurl": ["img/ลินดา.jpg", "img/ลินดา2.jpg"]
 				},{
-					"name": "ปุ๊โกะ","type": "สุนัข","age": 2,"gender": "Female","description": "สีขาว ชอบอาบน้ำ ว่ายน้ำ ชอบกินข้าวคลกน้ำพริก",
+					"name": "ปุ๊โกะ","type": "สุนัข","age": 2,"gender": "เพศเมีย","description": "สีขาว ชอบอาบน้ำ ว่ายน้ำ ชอบกินข้าวคลกน้ำพริก",
 					"breed": "เครนเทอร์เรีย","tag": ["ขี้เล่น","ขี้อ้อน","ขี้เซา"],"imgurl": ["img/ปุ๊โกะ.jpg", "img/ปุ๊โกะ.jpg"]
 				}],
 				"cat": [{
-					"name": "สิริ","type": "แมว","age": 2,"gender": "Female","description": "สามสี ส้ม ขาว ดำ ชอบกินปลาทูทอด ขี้อ้อน กลัวหมา",
+					"name": "สิริ","type": "แมว","age": 2,"gender": "เพศเมีย","description": "สามสี ส้ม ขาว ดำ ชอบกินปลาทูทอด ขี้อ้อน กลัวหมา",
 					"breed": "สามสี","tag": ["ขี้เล่น", "ขี้อ้อน"],"imgurl": ["img/siri.jpg"]
 				},{
-					"name": "แฮปปี้","type": "แมว","age": 3,"gender": "Male","description": "สีฟ้า ชอบนอน",
+					"name": "แฮปปี้","type": "แมว","age": 3,"gender": "เพศผู้","description": "สีฟ้า ชอบนอน",
 					"breed": "บริติชขนสั้น","tag": ["ขี้เซา"],"imgurl": ["img/happy.jpg"]
 				},{
-					"name": "มาจัง","type": "แมว","age": 1,"gender": "Female","description": "สีขาวอมส้ม ชอบนั่งหน้าโทรทัศน์",
+					"name": "มาจัง","type": "แมว","age": 1,"gender": "เพศเมีย","description": "สีขาวอมส้ม ชอบนั่งหน้าโทรทัศน์",
 					"breed": "มันช์กิ้น","tag": ["ขี้เล่น", "ขี้อ้อน"],"imgurl": ["img/maa.jpg"]
 				},{
-					"name": "จี้จัง","type": "แมว","age": 1,"gender": "Female","description": "สีขาว ชอบเล่นของเล่น",
+					"name": "จี้จัง","type": "แมว","age": 1,"gender": "เพศเมีย","description": "สีขาว ชอบเล่นของเล่น",
 					"breed": "สิงหะปุระ","tag": ["ขี้อ้อน"],"imgurl": ["img/chi.jpg"]
 				},{
-					"name": "โลจัง","type": "แมว","age": 1,"gender": "Female","description": "สีฟ้าเจือเงิน ชอบเล่นของเล่น",
+					"name": "โลจัง","type": "แมว","age": 1,"gender": "เพศเมีย","description": "สีฟ้าเจือเงิน ชอบเล่นของเล่น",
 					"breed": "รัสเซียนบลู","tag": ["ขี้อ้อน"],"imgurl": ["img/ro.jpg", "img/ro2.jpg"]
 				}],
 				"bird": [{
-					"name": "คิริ","type": "นก","age": 3,"gender": "Male","description": "สีเหลือง ขอบร้องเพลง",
+					"name": "คิริ","type": "นก","age": 3,"gender": "เพศผู้","description": "สีเหลือง ขอบร้องเพลง",
 					"breed": "คีรีบูน","tag": ["ขี้เล่น"],"imgurl": ["img/kiri.jpg"]
 				},{
-					"name": "นิจิ","type": "นก","age": 4,"gender": "Male","description": "ชอบเกาะตามขอบตู้หรือเตียง",
+					"name": "นิจิ","type": "นก","age": 4,"gender": "เพศผู้","description": "ชอบเกาะตามขอบตู้หรือเตียง",
 					"breed": "เยลโล่ไซต์คอนนัว","tag": ["ขี้กลัว"],"imgurl": ["img/niji.jpg"]
 				},{
-					"name": "ซันนี่","type": "นก","age": 2,"gender": "Female","description": "ชอบบินมาเกาะ",
+					"name": "ซันนี่","type": "นก","age": 2,"gender": "เพศเมีย","description": "ชอบบินมาเกาะ",
 					"breed": "ซันคอนัว","tag": ["ขี้้อ้อน"],"imgurl": ["img/sunny.jpg"]
 				},{
-					"name": "ยูกิ","type": "นก","age": 3,"gender": "Female","description": "ชอบเล่นไล่จับ",
+					"name": "ยูกิ","type": "นก","age": 3,"gender": "เพศเมีย","description": "ชอบเล่นไล่จับ",
 					"breed": "นกกระตั้ว","tag": ["ขี้เล่น"],"imgurl": ["img/yuki.jpg"]
 				},{
-					"name": "กิ๊ก","type": "นก","age": 2,"gender": "Female","description": "ชอบร้องเพลง ชอบพูดตามคน",
+					"name": "กิ๊ก","type": "นก","age": 2,"gender": "เพศเมีย","description": "ชอบร้องเพลง ชอบพูดตามคน",
 					"breed": "แก้ว","tag": ["ขี้เล่น"],"imgurl": ["img/กิ๊ก.jpg", "img/กิ๊ก2.jpg"]
 				}],
 				"mouse": [{
-					"name": "พายุ","type": "แฮมสเตอร์","age": 1,"gender": "Male","description": "ชอบวิ่ง ชอบกินธัญพืช ไม่ชอบอยู่เฉยๆ",
+					"name": "พายุ","type": "แฮมสเตอร์","age": 1,"gender": "เพศผู้","description": "ชอบวิ่ง ชอบกินธัญพืช ไม่ชอบอยู่เฉยๆ",
 					"breed": "-","tag": ["ขี้เล่น"],"imgurl": ["img/พายุ.jpg", "img/พายุ2.jpg"]
 				}],
 				"rabbit": [{
-					"name": "ทิปปี้","type": "กระต่าย","age": 4,"gender": "Female","description": "สีขาว ขนนุ่มพู",
+					"name": "ทิปปี้","type": "กระต่าย","age": 4,"gender": "เพศเมีย","description": "สีขาว ขนนุ่มพู",
 					"breed": "แองโกล่า","tag": ["ขี้เล่น", "ขี้อ้อน"],"imgurl": ["img/tippy.jpg"]
 				},{
-					"name": "อันโกะ","type": "กระต่าย","age": 3,"gender": "Male","description": "สีดำ ชอบนั่งอยู่นิ่งๆ",
+					"name": "อันโกะ","type": "กระต่าย","age": 3,"gender": "เพศผู้","description": "สีดำ ชอบนั่งอยู่นิ่งๆ",
 					"breed": "แองโกล่า","tag": ["ขี้เซา"],"imgurl": ["img/anko.jpg"]
 				},{
-					"name": "ชิรอน","type": "กระต่าย","age": 3,"gender": "Female","description": "สีขาว ชอบเล่นในกล่อง",
+					"name": "ชิรอน","type": "กระต่าย","age": 3,"gender": "เพศเมีย","description": "สีขาว ชอบเล่นในกล่อง",
 					"breed": "อิงลิซ ล็อป","tag": ["ขี้เล่น"],"imgurl": ["img/shiron.jpg"]
 				},{
-					"name": "โรโกะ","type": "กระต่าย","age": 2,"gender": "Female","description": "สีขาว ตื่นคนแปลกหน้า",
+					"name": "โรโกะ","type": "กระต่าย","age": 2,"gender": "เพศเมีย","description": "สีขาว ตื่นคนแปลกหน้า",
 					"breed": "เท็ดดี้แบร์ ","tag": ["ขี้กลัว"],"imgurl": ["img/roko.jpg"]
 				},{
-					"name": "เจอรี่","type": "กระต่าย","age": 1,"gender": "Male","description": "สีน้ำตาาล ตื่นเสียงสุนัข",
+					"name": "เจอรี่","type": "กระต่าย","age": 1,"gender": "เพศผู้","description": "สีน้ำตาาล ตื่นเสียงสุนัข",
 					"breed": "เจอร์รี่วู๊ดดี้ ","tag": ["ขี้กลัว", "ขี้อ้อน"],"imgurl": ["img/jerry.jpg"]
 				},{
-					"name": "วินดี้","type": "กระต่าย","age": 2,"gender": "Female","description": "สีขาว ชอบกินผักบุ้ง เป็นมิตร",
+					"name": "วินดี้","type": "กระต่าย","age": 2,"gender": "เพศเมีย","description": "สีขาว ชอบกินผักบุ้ง เป็นมิตร",
 					"breed": "ฮอลแลนด์ลอป","tag": ["ขี้เซา"],"imgurl": ["img/วินดี้.jpg"]
 				},{
-					"name": "เท็ดดี้","type": "กระต่าย","age": 3,"gender": "Male","description": "สีขาว ชอบวิ่ง ซน",
+					"name": "เท็ดดี้","type": "กระต่าย","age": 3,"gender": "เพศผู้","description": "สีขาว ชอบวิ่ง ซน",
 					"breed": "เท็ดดี้แบร์","tag": ["ขี้เล่น"],"imgurl": ["img/เท็ดดี้.jpg", "img/เท็ดดี้2.jpg", "img/เท็ดดี้3.jpg"]
 				}],
 				"other": [{
-					"name": "มีมี่","type": "เม่นแคระ","age": 2,"gender": "Male","description": "ขี้หนาว กลัวน้ำ กินอาหารแมวMeo ไม่ชอบเล่นด้วย จะขู่",
+					"name": "มีมี่","type": "เม่นแคระ","age": 2,"gender": "เพศผู้","description": "ขี้หนาว กลัวน้ำ กินอาหารแมวMeo ไม่ชอบเล่นด้วย จะขู่",
 					"breed": "เฮดจ์ฮอก","tag": ["ขี้กลัว","ขี้เซา"],"imgurl": ["img/มีมี่.jpg", "img/มีมี่2.jpg"]
 				},{
-					"name": "โซจิโร่","type": "เม่น","age": 2,"gender": "Male","description": "ชอบกินแอปเปิล",
+					"name": "โซจิโร่","type": "เม่น","age": 2,"gender": "เพศผู้","description": "ชอบกินแอปเปิล",
 					"breed": "-","tag": ["ขี้เซา", "ขี้อ้อน"],"imgurl": ["img/cocoa.jpg", "img/cocoa2.jpg"]
 				}]
 			}
