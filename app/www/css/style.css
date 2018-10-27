@@ -13,6 +13,14 @@ a
 	width: 50%;
 	height: auto;
 }
+.img-type{
+	width: 40%;
+	height: auto;
+	padding-top: 20px;
+}
+.sas{
+	background: #b3ffff;
+  }
 .displayed {
     margin-left: auto;
     margin-right: auto;
