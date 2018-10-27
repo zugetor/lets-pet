@@ -425,17 +425,17 @@ angular.module('starter.controllers', [])
 			cancelType: 'button-positive',
 			okText: "สถานพักพิงสัตว์นาเกลือ"
 		});
-
+		$scope.price = document.getElementById("donateVal").value;
 		confirmPopup.then(function(res) {
 			if(res) {
 				var alertPopup = $ionicPopup.alert({
 					title: 'PromptPay QR Code',
-					template: '<div class="text-center"><img src="https://promptpay.io/0909108479/"'+document.getElementById("donateVal").value+'" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
+					template: '<div class="text-center"><img src="https://promptpay.io/0909108479/'+$scope.price+'" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
 				});
 			} else {
 				var alertPopup2 = $ionicPopup.alert({
 					title: 'PromptPay QR Code',
-					template: '<div class="text-center"><img src="https://promptpay.io/0851412356/"'+document.getElementById("donateVal").value+'" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
+					template: '<div class="text-center"><img src="https://promptpay.io/0851412356/'+$scope.price+'" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
 				});
 			}			
 		});
