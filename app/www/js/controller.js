@@ -413,9 +413,34 @@ angular.module('starter.controllers', [])
 		}
 	};
 	$scope.type = $stateParams.type;
-	$scope.pet = $scope.allpet["allpet"][$scope.type]
+	$scope.pet = $scope.allpet["allpet"][$scope.type];
 })
 
+.controller('DonateCtrl', function($scope, $state, $ionicPlatform, $ionicPopup) {
+	$scope.openform = function(){		
+		var confirmPopup = $ionicPopup.confirm({
+			title: 'เลือกสถานที่บริจาค',
+			template: 'คุณจะบริจาคให้ที่ไหน?',
+			cancelText: 'สถานพักพิงสัตว์นีโม่',
+			cancelType: 'button-positive',
+			okText: "สถานพักพิงสัตว์นาเกลือ"
+		});
+
+		confirmPopup.then(function(res) {
+			if(res) {
+				var alertPopup = $ionicPopup.alert({
+					title: 'PromptPay QR Code',
+					template: '<div class="text-center"><img src="https://promptpay.io/0909108479/"'+document.getElementById("donateVal").value+'" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
+				});
+			} else {
+				var alertPopup2 = $ionicPopup.alert({
+					title: 'PromptPay QR Code',
+					template: '<div class="text-center"><img src="https://promptpay.io/0851412356/"'+document.getElementById("donateVal").value+'" class="img-auto"></img></div><p>สแกนหรือถ่ายภาพหน้าจอได้ทันที</p>'
+				});
+			}			
+		});
+	};
+})
 
 .controller('knowledgeCtrl', function($scope, $state, logincheck) {
 	var blog={
