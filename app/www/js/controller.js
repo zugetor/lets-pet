@@ -64,22 +64,12 @@ angular.module('starter.controllers', [])
 		}
 	})
 
-
 	.controller('LoginCtrl', function ($scope, $state, logincheck) {
 		$scope.login = function () {
 			logincheck.enter();
 			$state.go("app.home");
 		};
 	})
-
-$scope.tipOf = "ช็อตโกแลต \\nเป็นอาหา\\nรต้องห้าม\\nของเหล่\\nาสัตว์เลี้ยง";
-$scope.randomtip = function () {
-	$scope.tipOf = tip[Math.floor(Math.random() * tip.length)];
-}
-$interval(function () { $scope.randomtip(); }, 10000);
-$scope.go = function () {
-	logincheck.go();
-}
 
 
 	.controller('ProfileCtrl', function ($scope, $state, logincheck) {
@@ -449,7 +439,6 @@ $scope.go = function () {
 					"tag": ["ขี้เซา", "ขี้อ้อน"],
 					"imgurl": ["img/cocoa.jpg", "img/cocoa2.jpg"]
 				}
-
 				]
 			}
 		};
@@ -588,4 +577,3 @@ $scope.go = function () {
 		$scope.type = $stateParams.type;
 		$scope.posts = $scope.blog["posts"];
 	})
-
