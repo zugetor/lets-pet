@@ -2,34 +2,25 @@
   <ion-nav-bar class="bar-stable">
     <ion-nav-buttons side="left">
       <a class="button button-icon ion-arrow-left-c" href="#/app/menu"></a>
-    </ion-nav-buttons><br><br>
-
-
-
+    </ion-nav-buttons>
+    <ion-nav-title>Donate</ion-nav-title>
+  </ion-nav-bar>
+  <ion-content>
+	<br><br>
     <div class="row">
       <div class="col col-20"></div>
       <div class="col col-66">
         <label class="item item-input">
           <!-- <i class="icon ion-social-bitcoin placeholder-icon"></i> -->
-          <input type="text" placeholder="บริจาคให้ผมหน่อยคับ">
+          <input type="text" placeholder="บริจาคให้ผมหน่อยคับ" id="donateVal">
           THB
         </label>
       </div>
-
     </div>
-
     <div class="row">
-      <a class="col col-100 text-center" href="#/app/selecttype">
+      <a class="col col-100 text-center" ng-click="openform()">
         <img class="donate-pic" src="img/food.png">
-
       </a>
     </div>
-
-
-
-    <ion-nav-title>Donate</ion-nav-title>
-  </ion-nav-bar>
-  <ion-content>
-
   </ion-content>
 </ion-view>
